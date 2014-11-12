@@ -4,9 +4,6 @@ from selenium.webdriver.common.keys import Keys
 f = [i.strip() for i in open('creds').readlines()]
 username = f[0]
 password = f[1]
-lect = 11885
-disc1 = 11886
-disc2 = 11889
 successes = 0
 failures = 0
 while True:
@@ -34,11 +31,11 @@ while True:
         driver.find_element_by_id("DERIVED_REGFRM1_SSR_PB_SUBMIT").click()
         driver.close()
         successes += 1
-        print "successes: ", successes
+        print("successes: " + str(successes))
     except:
         # Non-deterministic html data...
         failures += 1
-        print "failed run", failures
+        print("failures: " + str(failures))
         driver.close()
 
 
