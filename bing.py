@@ -1,5 +1,6 @@
 from selenium import webdriver
 from selenium.webdriver.common.keys import Keys
+import time
 
 f = [i.strip() for i in open('creds').readlines()]
 username = f[0]
@@ -28,7 +29,6 @@ while True:
         first.send_keys(class1)
         second = driver.find_element_by_id("crn_id2")
         second.send_keys(class2)
-
         submit = find_by_tag_val("input", "Submit Changes")
         submit.click()
         driver.close()
@@ -39,3 +39,4 @@ while True:
         failures += 1
         print("failures: " + str(failures))
         driver.close()
+    time.sleep(10)
