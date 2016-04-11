@@ -19,6 +19,10 @@ while True:
         time.sleep(2)
         driver.find_element_by_id("DERIVED_SSS_SCR_SSS_LINK_ANCHOR3").click()
         time.sleep(2)
+        driver.find_element_by_id("SSR_DUMMY_RECV1$sels$2$$0").click()
+        time.sleep(2)
+        driver.find_element_by_id("DERIVED_SSS_SCT_SSR_PB_GO").click()
+        time.sleep(2)
         driver.find_element_by_id("DERIVED_REGFRM1_LINK_ADD_ENRL$82$").click()
         time.sleep(2)
         driver.find_element_by_id("DERIVED_REGFRM1_SSR_PB_SUBMIT").click()
@@ -32,5 +36,3 @@ while True:
         failures += 1
         print("failures: " + str(failures))
         driver.close()
-
-
