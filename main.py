@@ -9,7 +9,7 @@ successes = 0
 failures = 0
 while True:
     try:
-        driver = webdriver.Firefox()
+        driver = webdriver.PhantomJS()
         driver.get("http://www.studentcenter.cornell.edu")
         netidinput = driver.find_element_by_id("netid")
         passwdinput = driver.find_element_by_id("password")
